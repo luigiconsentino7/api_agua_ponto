@@ -13,6 +13,8 @@ namespace api_agua_ponto.Models
                 model.Example = new OpenApiObject
                 {
 
+                    ["email"] = new OpenApiString("string"),
+                    ["senha"] = new OpenApiString("string"),
                     ["nome"] = new OpenApiString("string"),
                     ["sobrenome"] = new OpenApiString("string"),
                     ["dataNascimento"] = new OpenApiDateTime(DateTime.Now),

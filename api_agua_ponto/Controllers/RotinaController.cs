@@ -60,6 +60,7 @@ namespace api_agua_ponto.Controllers
         {
             if (ModelState.IsValid)
             {
+                rotina.Ingestao = DateTime.Now;
                 _context.RotinaDb.Add(rotina);
                 _context.SaveChanges();
 

@@ -60,12 +60,14 @@ namespace api_agua_ponto.Controllers
         ///
         /// ```json
         /// {
+        ///     "email": "string",
+        ///     "senha": "string",
         ///     "nome": "string",
         ///     "sobrenome": "string",
         ///     "peso": double,
         ///     "idade": "int",
-        ///     "rotinaacorda": DateTime,
-        ///     "rotinadorme": DateTime,
+        ///     "rotinaAcorda": DateTime,
+        ///     "rotinaDorme": DateTime,
         ///     "mediaAgua": int
         /// }
         /// ```
@@ -80,6 +82,7 @@ namespace api_agua_ponto.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuario.SetSenhaHash();
                 _context.UsuarioDb.Add(usuario);
                 _context.SaveChanges();
 

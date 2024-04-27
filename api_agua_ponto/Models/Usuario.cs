@@ -1,8 +1,12 @@
-﻿namespace api_agua_ponto.Models
+﻿using api_agua_ponto.Helper;
+
+namespace api_agua_ponto.Models
 {
     public class Usuario
     {
         public int? Id { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -15,6 +19,8 @@
 
         public Usuario()
         {
+            Email = String.Empty;
+            Senha = String.Empty;
             Nome = String.Empty;
             Sobrenome = String.Empty;
             DataNascimento = DateTime.Now;
@@ -26,5 +32,10 @@
             Rotinas = new List<Rotina>();
         }
 
+        public void SetSenhaHash()
+        {
+            Senha = Senha.GerarHash();
+        }
+            
     }
 }

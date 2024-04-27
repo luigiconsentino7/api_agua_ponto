@@ -55,12 +55,14 @@
             
              ```json
              {
+                 "email": "string",
+                 "senha": "string",
                  "nome": "string",
                  "sobrenome": "string",
                  "peso": double,
                  "idade": "int",
-                 "rotinaacorda": DateTime,
-                 "rotinadorme": DateTime,
+                 "rotinaAcorda": DateTime,
+                 "rotinaDorme": DateTime,
                  "mediaAgua": int
              }
              ```
@@ -138,6 +140,18 @@
             <inheritdoc />
         </member>
         <member name="M:api_agua_ponto.Migrations.AddIdade.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AddEmailSenha">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

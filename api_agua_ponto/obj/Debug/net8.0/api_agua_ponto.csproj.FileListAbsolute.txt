@@ -136,3 +136,4 @@ C:\Users\luigi\OneDrive\Documentos\FECAP\api_agua_ponto_pi\api_agua_ponto\api_ag
 C:\Users\luigi\OneDrive\Documentos\FECAP\api_agua_ponto_pi\api_agua_ponto\api_agua_ponto\obj\Debug\net8.0\ref\api_agua_ponto.dll
 C:\Users\luigi\OneDrive\Documentos\FECAP\api_agua_ponto_pi\api_agua_ponto\api_agua_ponto\bin\Debug\net8.0\api_agua_ponto.xml
 C:\Users\luigi\OneDrive\Documentos\FECAP\api_agua_ponto_pi\api_agua_ponto\api_agua_ponto\obj\Debug\net8.0\api_agua_ponto.xml
+C:\Users\luigi\OneDrive\Documentos\FECAP\api_agua_ponto_pi\api_agua_ponto\api_agua_ponto\obj\Debug\net8.0\api_agua_ponto.sourcelink.json
