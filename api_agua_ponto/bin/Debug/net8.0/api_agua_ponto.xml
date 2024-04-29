@@ -49,7 +49,7 @@
         </member>
         <member name="M:api_agua_ponto.Controllers.UsuarioController.Post(api_agua_ponto.Models.Usuario)">
              <summary>
-             Cadastrar um Usuáio
+             Cadastrar um Usuário
              </summary>
              <remarks>
             
@@ -152,6 +152,30 @@
             <inheritdoc />
         </member>
         <member name="M:api_agua_ponto.Migrations.AddEmailSenha.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AzureBD">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.NewDb">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

@@ -13,7 +13,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConectionDb"));
+    options.UseSqlServer("Server=aguapontodata.database.windows.net;Database=AguaPontoData;User Id=aguapontogroup;Password=Aguaponto.2024;");
 });
 
 builder.Services.AddEndpointsApiExplorer();
@@ -42,14 +42,12 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "api_agua_ponto v1");
     });
-}
+
 
 app.UseCors(builder =>
 {

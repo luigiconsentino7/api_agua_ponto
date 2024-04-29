@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>api_agua_ponto</name>
+    </assembly>
+    <members>
+        <member name="M:api_agua_ponto.Controllers.RotinaController.GetById(System.Int32)">
+            <summary>
+            Listar uma Rotina pelo ID do Usuário
+            </summary>
+            <param name="id">Identificador do Usuário</param>
+            <returns>Rotina</returns>
+            <reponse code="200">Sucesso</reponse>
+            <response code="404">Rotina não encontrado</response>
+        </member>
+        <member name="M:api_agua_ponto.Controllers.RotinaController.Post(api_agua_ponto.Models.Rotina)">
+             <summary>
+             Cadastrar uma Rotina
+             </summary>
+             <remarks>
+            
+             ```json
+             {
+                 "mlIngerido": int,
+                 "usuarioId": int
+             }
+             ```
+             
+             </remarks>
+             <param name="rotina"></param>
+             <returns>Rotina Criada</returns>
+             <response code="201">Sucesso</response>
+        </member>
+        <member name="M:api_agua_ponto.Controllers.UsuarioController.GetAll">
+            <summary>
+            Listar todos os Usuários
+            </summary>
+            <returns>Todos os Usuário</returns>
+            <response code = "200">Sucesso</response>
+        </member>
+        <member name="M:api_agua_ponto.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Listar um Usuário específico por ID junto com sua lista de Rotina
+            </summary>
+            <param name="id">Identificador do Usuário</param>
+            <returns>Usuário</returns>
+            <reponse code="200">Sucesso</reponse>
+            <response code="404">Usuário não encontrado</response>
+        </member>
+        <member name="M:api_agua_ponto.Controllers.UsuarioController.Post(api_agua_ponto.Models.Usuario)">
+             <summary>
+             Cadastrar um Usuário
+             </summary>
+             <remarks>
+            
+             ```json
+             {
+                 "email": "string",
+                 "senha": "string",
+                 "nome": "string",
+                 "sobrenome": "string",
+                 "peso": double,
+                 "idade": "int",
+                 "rotinaAcorda": DateTime,
+                 "rotinaDorme": DateTime,
+                 "mediaAgua": int
+             }
+             ```
+             
+             </remarks>
+             <param name="usuario"></param>
+             <returns>Usuário Criado</returns>
+             <response code="201">Sucesso</response>
+        </member>
+        <member name="M:api_agua_ponto.Controllers.UsuarioController.Update(System.Int32,api_agua_ponto.Models.Usuario)">
+            <summary>
+            Atualizar um Usuário por ID
+            </summary>
+            <param name="id">Identificador do Usuário</param>
+            <param name="input">Dados do Usuário</param>
+            <returns>Nada.</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
+        <member name="T:api_agua_ponto.Migrations.firstmigration">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.firstmigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.firstmigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.firstmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AddDataNascimento">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddDataNascimento.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddDataNascimento.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddDataNascimento.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AddRotinaTable">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddRotinaTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddRotinaTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddRotinaTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.MergeIngestao">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.MergeIngestao.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.MergeIngestao.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.MergeIngestao.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AddIdade">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddIdade.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddIdade.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddIdade.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AddEmailSenha">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AddEmailSenha.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.AzureBD">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.AzureBD.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.NewDb">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

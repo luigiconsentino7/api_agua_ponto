@@ -1,0 +1,310 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "AguaPonto.API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/rotina/GetRotinaByUsuarioId/{id}": {
+      "get": {
+        "tags": [
+          "Rotina"
+        ],
+        "summary": "Listar uma Rotina pelo ID do Usuário",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Identificador do Usuário",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Rotina não encontrado",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          }
+        }
+      }
+    },
+    "/api/rotina/PostRotina": {
+      "post": {
+        "tags": [
+          "Rotina"
+        ],
+        "summary": "Cadastrar uma Rotina",
+        "description": "```json\r\n{\r\n    \"mlIngerido\": int,\r\n    \"usuarioId\": int\r\n}\r\n```",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Rotina"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    },
+    "/api/usuarios/GetAllUsuarios": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Listar todos os Usuários",
+        "responses": {
+          "200": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    },
+    "/api/usuarios/GetUsuario/{id}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Listar um Usuário específico por ID junto com sua lista de Rotina",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Identificador do Usuário",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "404": {
+            "description": "Usuário não encontrado",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          }
+        }
+      }
+    },
+    "/api/usuarios/PostUsuario": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Cadastrar um Usuário",
+        "description": "```json\r\n{\r\n    \"email\": \"string\",\r\n    \"senha\": \"string\",\r\n    \"nome\": \"string\",\r\n    \"sobrenome\": \"string\",\r\n    \"peso\": double,\r\n    \"idade\": \"int\",\r\n    \"rotinaAcorda\": DateTime,\r\n    \"rotinaDorme\": DateTime,\r\n    \"mediaAgua\": int\r\n}\r\n```",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    },
+    "/api/usuarios/UpdateUsuario/{id}": {
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "summary": "Atualizar um Usuário por ID",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Identificador do Usuário",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Dados do Usuário",
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Não encontrado",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          },
+          "204": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ProblemDetails": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "instance": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": { }
+    },
+    "Rotina": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ingestao": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "mlIngerido": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuarioId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "usuario": {
+          "$ref": "#/definitions/Usuario"
+        }
+      },
+      "example": {
+        "mlIngerido": 0,
+        "usuarioId": 0
+      }
+    },
+    "Usuario": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "email": {
+          "type": "string"
+        },
+        "senha": {
+          "type": "string"
+        },
+        "nome": {
+          "type": "string"
+        },
+        "sobrenome": {
+          "type": "string"
+        },
+        "dataNascimento": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "peso": {
+          "format": "double",
+          "type": "number"
+        },
+        "idade": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rotinaAcorda": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "rotinaDorme": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "mediaAgua": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "rotinas": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rotina"
+          }
+        }
+      },
+      "example": {
+        "email": "string",
+        "senha": "string",
+        "nome": "string",
+        "sobrenome": "string",
+        "dataNascimento": "2024-04-29T00:18:17.7932740-03:00",
+        "peso": 0,
+        "idade": 0,
+        "rotinaAcorda": "2024-04-29T00:18:17.7936402-03:00",
+        "rotinaDorme": "2024-04-29T00:18:17.7936507-03:00",
+        "mediaAgua": 0
+      }
+    }
+  }
+}

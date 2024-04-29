@@ -5,7 +5,10 @@ namespace api_agua_ponto.Data
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) 
+        {
+            Database.EnsureCreated();
+        }
 
         public DbSet<Usuario> UsuarioDb { get; set; }
         public DbSet<Rotina> RotinaDb { get; set; }

@@ -54,7 +54,7 @@ namespace api_agua_ponto.Controllers
         }
 
         /// <summary>
-        /// Cadastrar um Usuáio
+        /// Cadastrar um Usuário
         /// </summary>
         /// <remarks>
         ///
