@@ -298,11 +298,11 @@
         "senha": "string",
         "nome": "string",
         "sobrenome": "string",
-        "dataNascimento": "2024-04-29T00:18:17.7932740-03:00",
+        "dataNascimento": "2024-04-29T12:08:14.7532480-03:00",
         "peso": 0,
         "idade": 0,
-        "rotinaAcorda": "2024-04-29T00:18:17.7936402-03:00",
-        "rotinaDorme": "2024-04-29T00:18:17.7936507-03:00",
+        "rotinaAcorda": "2024-04-29T12:08:14.7534416-03:00",
+        "rotinaDorme": "2024-04-29T12:08:14.7534440-03:00",
         "mediaAgua": 0
       }
     }

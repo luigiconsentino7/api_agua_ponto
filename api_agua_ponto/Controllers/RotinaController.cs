@@ -29,7 +29,7 @@ namespace api_agua_ponto.Controllers
         public IActionResult GetById(int id)
         {
             var rotina = _context.RotinaDb
-                .SingleOrDefault(r => r.UsuarioId == id);
+                .Where(r => r.UsuarioId == id).ToList();
 
             if (rotina == null)
             {
