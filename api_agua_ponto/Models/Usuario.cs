@@ -9,11 +9,12 @@ namespace api_agua_ponto.Models
         public string Senha { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
         public double Peso { get; set; }
         public int Idade { get; set; }
-        public DateTime RotinaAcorda { get; set; }
-        public DateTime RotinaDorme { get; set; }
+        public double Altura { get; set; }
+        public string RotinaAcorda { get; set; }
+        public string RotinaDorme { get; set; }
         public int MediaAgua {  get; set; }
         public List<Rotina> Rotinas { get; set; }
 
@@ -23,11 +24,12 @@ namespace api_agua_ponto.Models
             Senha = String.Empty;
             Nome = String.Empty;
             Sobrenome = String.Empty;
-            DataNascimento = DateTime.Now;
+            DataNascimento = String.Empty;
             Peso = 0;
             Idade = 0;
-            RotinaAcorda = DateTime.Now;
-            RotinaDorme = DateTime.Now;
+            Altura = 0;
+            RotinaAcorda = String.Empty;
+            RotinaDorme = String.Empty;
             MediaAgua = 0;
             Rotinas = new List<Rotina>();
         }

@@ -64,10 +64,12 @@ namespace api_agua_ponto.Controllers
         ///     "senha": "string",
         ///     "nome": "string",
         ///     "sobrenome": "string",
+        ///     "dataNascimento": "string",
         ///     "peso": double,
-        ///     "idade": "int",
-        ///     "rotinaAcorda": DateTime,
-        ///     "rotinaDorme": DateTime,
+        ///     "idade": int,
+        ///     "altura": "string",
+        ///     "rotinaAcorda": "string",
+        ///     "rotinaDorme": "string",
         ///     "mediaAgua": int
         /// }
         /// ```
@@ -114,12 +116,17 @@ namespace api_agua_ponto.Controllers
                 return NotFound("Usuário não encontrado.");
             }
 
+            usuario.Email = input.Email;
+            usuario.Senha = input.Senha;
             usuario.Nome = input.Nome;
             usuario.Sobrenome = input.Sobrenome;
             usuario.DataNascimento = input.DataNascimento;
             usuario.Peso = input.Peso;
+            usuario.Idade = input.Idade;
+            usuario.Altura = input.Altura;
             usuario.RotinaAcorda = input.RotinaAcorda;
             usuario.RotinaDorme = input.RotinaDorme;
+            usuario.MediaAgua = input.MediaAgua;
 
 
             _context.UsuarioDb.Update(usuario);

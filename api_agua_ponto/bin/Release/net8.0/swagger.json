@@ -121,7 +121,7 @@
           "Usuario"
         ],
         "summary": "Cadastrar um Usuário",
-        "description": "```json\r\n{\r\n    \"email\": \"string\",\r\n    \"senha\": \"string\",\r\n    \"nome\": \"string\",\r\n    \"sobrenome\": \"string\",\r\n    \"peso\": double,\r\n    \"idade\": \"int\",\r\n    \"rotinaAcorda\": DateTime,\r\n    \"rotinaDorme\": DateTime,\r\n    \"mediaAgua\": int\r\n}\r\n```",
+        "description": "```json\r\n{\r\n    \"email\": \"string\",\r\n    \"senha\": \"string\",\r\n    \"nome\": \"string\",\r\n    \"sobrenome\": \"string\",\r\n    \"dataNascimento\": \"string\",\r\n    \"peso\": double,\r\n    \"idade\": int,\r\n    \"altura\": \"string\",\r\n    \"rotinaAcorda\": \"string\",\r\n    \"rotinaDorme\": \"string\",\r\n    \"mediaAgua\": int\r\n}\r\n```",
         "consumes": [
           "application/json",
           "text/json",
@@ -263,7 +263,6 @@
           "type": "string"
         },
         "dataNascimento": {
-          "format": "date-time",
           "type": "string"
         },
         "peso": {
@@ -274,12 +273,14 @@
           "format": "int32",
           "type": "integer"
         },
+        "altura": {
+          "format": "double",
+          "type": "number"
+        },
         "rotinaAcorda": {
-          "format": "date-time",
           "type": "string"
         },
         "rotinaDorme": {
-          "format": "date-time",
           "type": "string"
         },
         "mediaAgua": {
@@ -298,11 +299,12 @@
         "senha": "string",
         "nome": "string",
         "sobrenome": "string",
-        "dataNascimento": "2024-04-29T12:08:14.7532480-03:00",
+        "dataNascimento": "string",
         "peso": 0,
         "idade": 0,
-        "rotinaAcorda": "2024-04-29T12:08:14.7534416-03:00",
-        "rotinaDorme": "2024-04-29T12:08:14.7534440-03:00",
+        "altura": 0,
+        "rotinaAcorda": "string",
+        "rotinaDorme": "string",
         "mediaAgua": 0
       }
     }

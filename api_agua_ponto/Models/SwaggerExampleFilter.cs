@@ -17,11 +17,12 @@ namespace api_agua_ponto.Models
                     ["senha"] = new OpenApiString("string"),
                     ["nome"] = new OpenApiString("string"),
                     ["sobrenome"] = new OpenApiString("string"),
-                    ["dataNascimento"] = new OpenApiDateTime(DateTime.Now),
+                    ["dataNascimento"] = new OpenApiString("string"),
                     ["peso"] = new OpenApiDouble(0),
                     ["idade"] = new OpenApiInteger(0),
-                    ["rotinaAcorda"] = new OpenApiDateTime(DateTime.Now),
-                    ["rotinaDorme"] = new OpenApiDateTime(DateTime.Now),
+                    ["altura"] = new OpenApiDouble(0),
+                    ["rotinaAcorda"] = new OpenApiString("string"),
+                    ["rotinaDorme"] = new OpenApiString("string"),
                     ["mediaAgua"] = new OpenApiInteger(0),
 
                 };

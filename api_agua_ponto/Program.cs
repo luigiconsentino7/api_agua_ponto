@@ -13,7 +13,7 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 // Add services to the container.
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer("Server=aguapontodata.database.windows.net;Database=AguaPontoData;User Id=aguapontogroup;Password=Aguaponto.2024;");
+    options.UseSqlServer("Server=aguapontodata.database.windows.net;Database=aguapontodb;User Id=aguapontodb;Password=Aguaponto.2024;");
 });
 
 builder.Services.AddEndpointsApiExplorer();

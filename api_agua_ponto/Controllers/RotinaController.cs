@@ -11,6 +11,8 @@ namespace api_agua_ponto.Controllers
     {
         readonly AppDbContext _context;
 
+        private readonly TimeZoneInfo _brasiliaTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+
         public RotinaController(AppDbContext context)
         {
             _context = context;
@@ -60,7 +62,7 @@ namespace api_agua_ponto.Controllers
         {
             if (ModelState.IsValid)
             {
-                rotina.Ingestao = DateTime.Now;
+                rotina.Ingestao = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, _brasiliaTimeZone); ;
                 _context.RotinaDb.Add(rotina);
                 _context.SaveChanges();
 

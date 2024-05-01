@@ -59,10 +59,12 @@
                  "senha": "string",
                  "nome": "string",
                  "sobrenome": "string",
+                 "dataNascimento": "string",
                  "peso": double,
-                 "idade": "int",
-                 "rotinaAcorda": DateTime,
-                 "rotinaDorme": DateTime,
+                 "idade": int,
+                 "altura": "string",
+                 "rotinaAcorda": "string",
+                 "rotinaDorme": "string",
                  "mediaAgua": int
              }
              ```
@@ -176,6 +178,18 @@
             <inheritdoc />
         </member>
         <member name="M:api_agua_ponto.Migrations.NewDb.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.NewDataBase">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDataBase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDataBase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.NewDataBase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
