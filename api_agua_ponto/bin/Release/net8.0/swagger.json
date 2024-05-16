@@ -68,6 +68,40 @@
         }
       }
     },
+    "/api/rotina/DeleteRotina/{id}": {
+      "delete": {
+        "tags": [
+          "Rotina"
+        ],
+        "summary": "Deletar uma Rotina por ID",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "Identificador da Rotina",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Não encontrado",
+            "schema": {
+              "$ref": "#/definitions/ProblemDetails"
+            }
+          },
+          "204": {
+            "description": "Sucesso"
+          }
+        }
+      }
+    },
     "/api/usuarios/GetAllUsuarios": {
       "get": {
         "tags": [

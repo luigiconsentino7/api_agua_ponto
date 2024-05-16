@@ -31,6 +31,15 @@
              <returns>Rotina Criada</returns>
              <response code="201">Sucesso</response>
         </member>
+        <member name="M:api_agua_ponto.Controllers.RotinaController.Delete(System.Int32)">
+            <summary>
+            Deletar uma Rotina por ID
+            </summary>
+            <param name="id">Identificador da Rotina</param>
+            <returns>Nada.</returns>
+            <response code="404">Não encontrado</response>
+            <response code="204">Sucesso</response>
+        </member>
         <member name="M:api_agua_ponto.Controllers.UsuarioController.GetAll">
             <summary>
             Listar todos os Usuários
@@ -190,6 +199,18 @@
             <inheritdoc />
         </member>
         <member name="M:api_agua_ponto.Migrations.NewDataBase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:api_agua_ponto.Migrations.newAguaPontoDB">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.newAguaPontoDB.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.newAguaPontoDB.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:api_agua_ponto.Migrations.newAguaPontoDB.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

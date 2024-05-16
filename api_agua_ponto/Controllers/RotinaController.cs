@@ -74,6 +74,32 @@ namespace api_agua_ponto.Controllers
 
         }
 
+        /// <summary>
+        /// Deletar uma Rotina por ID
+        /// </summary>
+        /// <param name="id">Identificador da Rotina</param>
+        /// <returns>Nada.</returns>
+        /// <response code="404">Não encontrado</response>
+        /// <response code="204">Sucesso</response>
+        [HttpDelete("DeleteRotina/{id}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public IActionResult Delete(int id)
+        {
+            var rotina = _context.RotinaDb.SingleOrDefault(r => r.Id == id);
+
+            if (rotina == null)
+            {
+                return NotFound("Rotina não encontrada.");
+            }
+
+            _context.RotinaDb.Remove(rotina);
+
+            _context.SaveChanges();
+
+            return NoContent();
+        }
+
         /*
         /// <summary>
         /// Atualizar uma Rotina por ID

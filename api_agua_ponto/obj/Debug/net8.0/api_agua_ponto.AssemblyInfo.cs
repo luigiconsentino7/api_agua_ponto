@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api_agua_ponto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e498d17ae27f5184398f3b6260d55ad562b85973")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af2a3be0629840399af755c5d40844bee082a73d")]
 [assembly: System.Reflection.AssemblyProductAttribute("api_agua_ponto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api_agua_ponto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

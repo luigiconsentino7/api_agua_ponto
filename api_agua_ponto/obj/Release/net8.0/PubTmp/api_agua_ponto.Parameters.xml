@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="apiaguaponto2024" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="apiaguaponto" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\luigi\\OneDrive\\Documentos\\FECAP\\api_agua_ponto_pi\\api_agua_ponto\\api_agua_ponto\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>
